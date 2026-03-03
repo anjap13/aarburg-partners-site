@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aarburg Partners — Independent M&A Advisory</title>
+<title>Aarburg Partners - Independent M&amp;A Advisory</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -32,7 +32,7 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  /* ── NAV ── */
+  /* NAV */
   nav {
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -76,7 +76,7 @@
   }
   .nav-links a:hover { color: var(--white); }
 
-  /* ── HERO ── */
+  /* HERO */
   .hero {
     position: relative;
     min-height: 100vh;
@@ -98,7 +98,6 @@
       linear-gradient(180deg, var(--black) 0%, transparent 20%, transparent 85%, var(--black) 100%);
     z-index: 1;
   }
-  /* subtle grid texture */
   .hero::after {
     content: '';
     position: absolute;
@@ -171,14 +170,14 @@
     border-color: var(--white);
   }
 
-  /* ── DIVIDER ── */
+  /* DIVIDER */
   .divider {
     width: 100%;
     height: 1px;
     background: linear-gradient(90deg, transparent, rgba(184,168,138,0.3), transparent);
   }
 
-  /* ── SERVICES ── */
+  /* SERVICES */
   .services {
     padding: 7rem 4rem;
     background: var(--black);
@@ -253,7 +252,7 @@
     font-weight: 300;
   }
 
-  /* ── ABOUT ── */
+  /* ABOUT */
   .about {
     padding: 7rem 4rem;
     background: var(--navy);
@@ -337,7 +336,7 @@
     font-weight: 400;
   }
 
-  /* ── CTA BAND ── */
+  /* CTA BAND */
   .cta-band {
     padding: 5rem 4rem;
     background: var(--black);
@@ -377,7 +376,7 @@
     color: var(--black);
   }
 
-  /* ── FOOTER ── */
+  /* FOOTER */
   footer {
     padding: 3rem 4rem;
     border-top: 1px solid rgba(255,255,255,0.05);
@@ -399,7 +398,7 @@
     letter-spacing: 0.05em;
   }
 
-  /* ── ANIMATIONS ── */
+  /* ANIMATIONS */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(24px); }
     to { opacity: 1; transform: translateY(0); }
@@ -415,7 +414,7 @@
     transform: translateY(0);
   }
 
-  /* ── RESPONSIVE ── */
+  /* RESPONSIVE */
   @media (max-width: 900px) {
     nav { padding: 1.2rem 1.5rem; }
     .nav-links { display: none; }
@@ -432,7 +431,6 @@
 </head>
 <body>
 
-<!-- NAV -->
 <nav id="mainNav">
   <a href="#" class="nav-logo">AARBURG <span>PARTNERS</span></a>
   <ul class="nav-links">
@@ -442,10 +440,9 @@
   </ul>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-content">
-    <p class="hero-eyebrow">Independent M&A Advisory</p>
+    <p class="hero-eyebrow">Independent M&amp;A Advisory</p>
     <h1>Where <em>Insight</em> Meets<br>the Transaction.</h1>
     <p class="hero-tagline">Strategic counsel for owners, founders, and boards navigating transformational deals.</p>
     <a href="#contact" class="hero-cta">Begin a Conversation</a>
@@ -454,7 +451,6 @@
 
 <div class="divider"></div>
 
-<!-- SERVICES -->
 <section class="services" id="services">
   <div class="section-header reveal">
     <p class="section-label">Advisory Services</p>
@@ -481,7 +477,6 @@
 
 <div class="divider"></div>
 
-<!-- ABOUT -->
 <section class="about" id="about">
   <div class="about-inner">
     <div class="about-left reveal">
@@ -502,7 +497,7 @@
       <p>Aarburg Partners was founded on a straightforward premise: owners and boards deserve advisory counsel that is fully aligned with their outcome — not a firm's league table. Every engagement is led at the principal level, with no hand-offs, no junior analysts running the process, and no divided loyalties.</p>
       <p>Our experience spans decades of transaction advisory across industries and deal sizes. We bring institutional rigor with entrepreneurial commitment, treating each mandate as if our own capital were at stake.</p>
       <div class="credential-tags">
-        <span class="credential-tag">Sell-Side M&A</span>
+        <span class="credential-tag">Sell-Side M&amp;A</span>
         <span class="credential-tag">Buy-Side Advisory</span>
         <span class="credential-tag">Recapitalizations</span>
         <span class="credential-tag">Strategic Review</span>
@@ -514,30 +509,38 @@
 
 <div class="divider"></div>
 
-<!-- CTA -->
 <section class="cta-band" id="contact">
   <h2>Considering a Transaction?</h2>
   <p>Every engagement begins with a confidential conversation. No obligations, no pitch — just an honest assessment of your situation.</p>
   <a href="mailto:anja@aarburgpartners.com">Schedule a Discussion</a>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-logo">AARBURG PARTNERS</div>
   <div class="footer-copy">&copy; 2026 Aarburg Partners. All rights reserved.</div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  // Nav scroll behavior
-  const nav = document.getElementById('mainNav');
-  window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 60);
+<script>
+  var nav = document.getElementById('mainNav');
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 60) {
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
   });
 
-  // Reveal on scroll
-  const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
+  var reveals = document.querySelectorAll('.reveal');
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry, i) {
       if (entry.isIntersecting) {
-        setTimeout(() => entry.target.classList.add('visible'), i * 120);
-    
+        setTimeout(function() { entry.target.classList.add('visible'); }, i * 120);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  reveals.forEach(function(el) { observer.observe(el); });
+</script>
+
+</body>
+</html>
