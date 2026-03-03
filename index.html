@@ -452,22 +452,22 @@
 <div class="divider"></div>
 
 <section class="services" id="services">
-  <div class="section-header reveal">
+  <div class="section-header">
     <p class="section-label">Advisory Services</p>
     <h2 class="section-title">Structured Around Your Outcome</h2>
   </div>
   <div class="services-grid">
-    <div class="service-card reveal">
+    <div class="service-card">
       <div class="service-number">01</div>
       <h3>Sell-Side Advisory</h3>
       <p>Full-process management from positioning through close — market mapping, buyer outreach, competitive dynamics, and negotiation to maximize enterprise value.</p>
     </div>
-    <div class="service-card reveal">
+    <div class="service-card">
       <div class="service-number">02</div>
       <h3>Buy-Side Advisory</h3>
       <p>Target identification, valuation discipline, and deal structuring for acquirers pursuing strategic growth through acquisition.</p>
     </div>
-    <div class="service-card reveal">
+    <div class="service-card">
       <div class="service-number">03</div>
       <h3>Strategic Alternatives</h3>
       <p>Objective evaluation of recapitalization, minority sale, majority sale, or full exit — aligning transaction structure with long-term owner objectives.</p>
@@ -479,7 +479,7 @@
 
 <section class="about" id="about">
   <div class="about-inner">
-    <div class="about-left reveal">
+    <div class="about-left">
       <p class="section-label">The Firm</p>
       <h2 class="section-title">Independent Judgment.<br>Principal-Level Execution.</h2>
       <div class="about-stat-row">
@@ -493,7 +493,7 @@
         </div>
       </div>
     </div>
-    <div class="about-right reveal">
+    <div class="about-right">
       <p>Aarburg Partners was founded on a straightforward premise: owners and boards deserve advisory counsel that is fully aligned with their outcome — not a firm's league table. Every engagement is led at the principal level, with no hand-offs, no junior analysts running the process, and no divided loyalties.</p>
       <p>Our experience spans decades of transaction advisory across industries and deal sizes. We bring institutional rigor with entrepreneurial commitment, treating each mandate as if our own capital were at stake.</p>
       <div class="credential-tags">
@@ -520,27 +520,8 @@
   <div class="footer-copy">&copy; 2026 Aarburg Partners. All rights reserved.</div>
 </footer>
 
-<script>
-  var nav = document.getElementById('mainNav');
-  window.addEventListener('scroll', function() {
-    if (window.scrollY > 60) {
-      nav.classList.add('scrolled');
-    } else {
-      nav.classList.remove('scrolled');
-    }
-  });
 
-  var reveals = document.querySelectorAll('.reveal');
-  var observer = new IntersectionObserver(function(entries) {
-    entries.forEach(function(entry, i) {
-      if (entry.isIntersecting) {
-        setTimeout(function() { entry.target.classList.add('visible'); }, i * 120);
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.15 });
-  reveals.forEach(function(el) { observer.observe(el); });
-</script>
 
 </body>
 </html>
+
